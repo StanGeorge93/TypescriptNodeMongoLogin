@@ -20,11 +20,8 @@ class App {
   private mountRoutes(): void {
     const apiRouter = express.Router()
 
-    logger("MOUNTED ROUTES!")
-
     apiRouter.use('/api/v1/', (req, res, next) => {
-      res.send("WATADFADA")
-      logger("WORKS!")
+      res.send("Works!")
     })
 
     this.express.use('/api/v1/users', UserRouter)
